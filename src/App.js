@@ -1,18 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
 import Channels from './components/Channels';
+import Faqs from './components/Faqs';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Channels></Channels>
-      </header>
-    </div>
+    <>
+      <Channels />
+      <Faqs />
+    </>
   );
 }
 
