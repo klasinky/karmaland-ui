@@ -1,12 +1,46 @@
-import React, { useState } from "react";
-import getData from "../axios";
+import React, { useState, useEffect } from "react";
+import { getData } from "../services";
+import Channel from "./Channel";
 
 const Channels = () => {
-    const [channels, setChannels] = useState(getData());
-    console.log(channels);
-    return <div>
-        <h1>Channels</h1>
-    </div>;
+
+    const [channels, setChannels] = useState([]);
+
+    // Get channels from API
+    useEffect(() => {
+        const getChannels = async () => {
+            // const data = await getData()
+            const data = [
+                {user_name: "alexby11", viewer_count: 1231},
+                {user_name: "rubius", viewer_count: 18231},
+                {user_name: "mangel", viewer_count: 12361},
+                {user_name: "illojuan", viewer_count: 12331},
+            ]
+            setChannels(data)
+        }
+        getChannels()
+    }, [])
+
+
+
+
+    return (
+        <section className="section streamer-drops campaign campaign-0">
+            <div className="container">
+
+                <div className="section-header">
+                    <div className="header-body">
+                        <h1>KARMALVND</h1>
+                        <p>Canales en directo transmitiendo karmaland en todas las plataformas.</p>
+                    </div>
+                </div>
+
+                <div className="drops-group streamer-specific">
+                    {channels && channels.map((channel) => <Channel key={channel} channel={channel} />)}
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default Channels;
