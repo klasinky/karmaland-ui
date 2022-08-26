@@ -74,6 +74,12 @@ span {
 
 /* Channel */
 
+.drop-tile:hover {
+  box-shadow: 0 5px 50px rgb(0 0 0 / 80%);
+  transform: scale(105%);
+  z-index: 2;
+}
+
 .drop-tile {
   background-color: #251f0f;
   box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
