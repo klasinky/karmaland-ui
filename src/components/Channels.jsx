@@ -30,7 +30,7 @@ const Channels = () => {
 
                 <div className="section-header">
                     <div className="header-body">
-                        <h1>KARMALVND</h1>
+                        <img className="img-fluid karmaland-logo" src="https://www.pulsovideojuegos.com/wp-content/uploads/2022/07/karmaland-5.png" alt="karmalvnd logo" />
                         <p>Canales en directo transmitiendo karmaland en todas las plataformas.</p>
                     </div>
                 </div>

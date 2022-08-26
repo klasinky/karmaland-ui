@@ -19,7 +19,7 @@ const Channel = ({ channel }) => {
                             {/* Name */}
                             <div className="streamer-name-wrapper">
                                 <span className="streamer-name">{user_name}</span>
-                                <span className="streamer-captain-type red">{viewer_count}</span>
+                                {/* <span className="streamer-captain-type red">{viewer_count}</span> */}
                             </div>
 
                             {/* Online Status */}
