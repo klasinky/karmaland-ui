@@ -1,9 +1,13 @@
 const data = [
     {
-        question: "Which streams do I need to watch to get drops?",
-        answer: "However, streamer-specific drops will require you to watch a specific streamer in order to get their drop. All participating streamers are listed above and all active campaigns and their conditions can always be seen on"
-    }
-]
+        question: "¿Por qué no se muestra ningún canal?",
+        answer: "Si no se muestra ningún canal, es porque no se encuentran en directo, vuelve a intentarlo más tarde.",
+    },
+    {
+        question: "¿Cómo hago para ver el canal en directo?",
+        answer: "Tan solo debes hacer click en el canal que deseas ver en directo y se abrirá en una nueva pestaña.",
+    },
+];
 
 const Faqs = () => {
     return (
@@ -16,16 +20,25 @@ const Faqs = () => {
 
                     <div className="section-body">
                         {data.map(({ question, answer }) => (
-                            <div className="faq-question">
+                            <div key={question} className="faq-question">
                                 <h2>{question}</h2>
                                 <p>{answer}</p>
                             </div>
                         ))}
+                        <div className="faq-question">
+                            <h2>¡Síguenos!</h2>
+                            <p>
+                                Puedes encontrar más información acerca de nosotros en nuestras
+                                páginas web <a href="https://zclut.github.io/portfolio/" target={"_blank"} rel="noreferrer">zClut</a> y{" "}
+                                <a href="https://www.klasinky.com/" target={"_blank"} rel="noreferrer">Klasinky</a>
+                                .
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
         </>
     );
-}
+};
 
 export default Faqs;

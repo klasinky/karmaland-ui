@@ -1,12 +1,14 @@
+import { getUrlChannel } from "../utils";
+
 const Channel = ({ channel }) => {
 
-    const { user_name, viewer_count } = channel
+    const { user_name, platform, title } = channel
 
     const getImage = (user_name) => `${process.env.PUBLIC_URL}/images/${user_name}.png`
-
+    const urlChannel = getUrlChannel(user_name, platform)
     return (
         <>
-            <a href="" className='drop-tile is-live'>
+            <a href={urlChannel} target="_blank" rel="noreferrer"  className='drop-tile is-live'>
                 <div className="drop-header red">
                     <div className="streamer-details">
                         {/* Avatar */}
@@ -19,7 +21,7 @@ const Channel = ({ channel }) => {
                             {/* Name */}
                             <div className="streamer-name-wrapper">
                                 <span className="streamer-name">{user_name}</span>
-                                {/* <span className="streamer-captain-type red">{viewer_count}</span> */}
+                                <span className="streamer-title ">{title}</span>
                             </div>
 
                             {/* Online Status */}
