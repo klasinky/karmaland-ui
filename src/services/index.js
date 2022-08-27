@@ -12,6 +12,11 @@ const channels = [
 ]
 
 export const getData = async () => {
-    const { data } = await client.post("channels/", channels);
-    return data
+    try {
+        const { data } = await client.post("channels/", channels);
+        return data
+    } catch (error) {
+       
+    }
+    return []
 }
