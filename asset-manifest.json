@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/karmaland-ui/static/css/main.6717a941.css",
-    "main.js": "/karmaland-ui/static/js/main.bfb717fb.js",
-    "static/js/27.3327c8c8.chunk.js": "/karmaland-ui/static/js/27.3327c8c8.chunk.js",
-    "index.html": "/karmaland-ui/index.html"
+    "main.css": "/static/css/main.6717a941.css",
+    "main.js": "/static/js/main.b2b6d1a2.js",
+    "static/js/27.3327c8c8.chunk.js": "/static/js/27.3327c8c8.chunk.js",
+    "index.html": "/index.html"
   },
   "entrypoints": [
     "static/css/main.6717a941.css",
-    "static/js/main.bfb717fb.js"
+    "static/js/main.b2b6d1a2.js"
   ]
 }
