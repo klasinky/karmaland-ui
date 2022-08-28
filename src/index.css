@@ -225,6 +225,15 @@ a {
     padding-top: 2rem;
 }
 
+/* ------------------------- Media Query Breakpoints ------------------------ */
+
+@media (max-width: 768px) {
+    .karmaland-logo {
+        width: 200px;
+    }
+}
+
+
 /* FAQs */
 
 .section.is-large {

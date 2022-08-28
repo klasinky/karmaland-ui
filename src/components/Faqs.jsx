@@ -33,6 +33,7 @@ const Faqs = () => {
                                 <a href="https://www.klasinky.com/" target={"_blank"} rel="noreferrer">Klasinky</a>
                                 .
                             </p>
+                            
                         </div>
                     </div>
                 </div>
