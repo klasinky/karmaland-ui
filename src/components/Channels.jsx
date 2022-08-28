@@ -8,13 +8,7 @@ const Channels = () => {
     // Get channels from API
     useEffect(() => {
         const getChannels = async () => {
-            // const data = await getData();
-            const data = [
-                {user_name: "alexby11", viewer_count: 1231},
-                {user_name: "rubius", viewer_count: 18231},
-                {user_name: "mangel", viewer_count: 12361},
-                {user_name: "illojuan", viewer_count: 12331},
-            ]
+            const data = await getData();
             setChannels(data);
         };
         getChannels();
