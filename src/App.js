@@ -17,6 +17,7 @@ function App() {
           path="karmaland"
           element={
             <Channels
+              key="karmaland"
               streamers={karmaland}
               description="Karmaland"
               logo={karmalandLogo}
@@ -28,6 +29,7 @@ function App() {
           path="tortillaland"
           element={
             <Channels
+              key="tortillaland"
               streamers={tortillaland}
               description="Tortillaland"
               logo={tortillalandLogo}

@@ -11,13 +11,14 @@ const Channels = ({ streamers, logo, description }) => {
 
     // Get channels from API
     useEffect(() => {
+        setLoading(true)
         const getChannels = async () => {
             const data = await getData(streamers);
             setChannels(data);
             setLoading(false);
         };
         getChannels();
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    }, [streamers, logo, description]);
 
     return (
         <section className="section streamer-drops campaign campaign-0">
