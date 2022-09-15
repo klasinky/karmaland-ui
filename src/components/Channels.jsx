@@ -1,19 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { getData } from "../services";
 import Channel from "./Channel";
+import ChannelSkeleton from "./ChannelSkeleton";
 
-const Channels = () => {
+const Channels = ({ streamers, logo, description }) => {
     const [channels, setChannels] = useState([]);
+    const [loading, setLoading] = useState(true);
+    // Array for showing the loading animation
+    const loadingArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
     // Get channels from API
     useEffect(() => {
+        setLoading(true)
         const getChannels = async () => {
-            const data = await getData();
+            const data = await getData(streamers);
             setChannels(data);
+            setLoading(false);
         };
         getChannels();
-    }, []);
-    
+    }, [streamers, logo, description]);
+
     return (
         <section className="section streamer-drops campaign campaign-0">
             <div className="container">
@@ -21,29 +27,41 @@ const Channels = () => {
                     <div className="header-body">
                         <img
                             className="img-fluid karmaland-logo"
-                            src={`${process.env.PUBLIC_URL}/images/karmaland-5.webp`}
-                            alt="karmalvnd logo"
+                            src={`${process.env.PUBLIC_URL}/images/${logo}`}
+                            alt={`${description} logo`}
                         />
                         <p>
-                            Canales en directo transmitiendo karmaland en todas
-                            las plataformas.
+                            Canales en directo transmitiendo {description} en
+                            todas las plataformas.
                         </p>
                     </div>
                 </div>
-
-                <div className="drops-group streamer-specific">
-                    {channels &&
-                        channels.map((channel) => (
-                            <Channel
-                                key={channel.user_name}
-                                channel={channel}
-                            />
+                {!loading ? (
+                    <div className="drops-group streamer-specific">
+                        {channels &&
+                            channels.map((channel) => (
+                                <Channel
+                                    key={channel.user_name}
+                                    channel={channel}
+                                />
+                            ))}
+                        {/* if channels is empty */}
+                        {!channels.length && (
+                            <div className="text-center">
+                                <h3>
+                                    En estos momentos ningún streamer de{" "}
+                                    {description} está en directo 😔
+                                </h3>
+                            </div>
+                        )}
+                    </div>
+                ) : (
+                    <div className="drops-group streamer-specific">
+                        {loadingArray.map((item) => (
+                            <ChannelSkeleton key={item} />
                         ))}
-                    {/* if channels is empty */}
-                    {!channels.length && <div className="text-center"> 
-                    <h3>En estos momentos ningún streamer de Karmaland está en directo 😔</h3>
-                    </div>}
-                </div>
+                    </div>
+                )}
             </div>
         </section>
     );
