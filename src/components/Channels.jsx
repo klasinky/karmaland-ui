@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 import { getData } from "../services";
 import Channel from "./Channel";
 
-const Channels = () => {
+const Channels = ({ streamers, logo, description }) => {
     const [channels, setChannels] = useState([]);
 
     // Get channels from API
     useEffect(() => {
         const getChannels = async () => {
-            const data = await getData();
-            setChannels(data);
+            // const data = await getData(streamers);
+            // setChannels(data);
         };
         getChannels();
     }, []);
-    
+
     return (
         <section className="section streamer-drops campaign campaign-0">
             <div className="container">
@@ -21,11 +21,11 @@ const Channels = () => {
                     <div className="header-body">
                         <img
                             className="img-fluid karmaland-logo"
-                            src={`${process.env.PUBLIC_URL}/images/karmaland-5.webp`}
-                            alt="karmalvnd logo"
+                            src={`${process.env.PUBLIC_URL}/images/${logo}`}
+                            alt={`${description} logo`}
                         />
                         <p>
-                            Canales en directo transmitiendo karmaland en todas
+                            Canales en directo transmitiendo { description } en todas
                             las plataformas.
                         </p>
                     </div>
@@ -40,8 +40,8 @@ const Channels = () => {
                             />
                         ))}
                     {/* if channels is empty */}
-                    {!channels.length && <div className="text-center"> 
-                    <h3>En estos momentos ningún streamer de Karmaland está en directo 😔</h3>
+                    {!channels.length && <div className="text-center">
+                        <h3>En estos momentos ningún streamer de { description } está en directo 😔</h3>
                     </div>}
                 </div>
             </div>

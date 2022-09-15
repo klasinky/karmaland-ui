@@ -1,4 +1,4 @@
-function getUrlChannel(userName, platform) {
+export const getUrlChannel = (userName, platform) => {
     const urls = {
         youtube: `https://www.youtube.com/channel/${userName}/live`,
         twitch: `https://www.twitch.tv/${userName}`
@@ -7,4 +7,5 @@ function getUrlChannel(userName, platform) {
     return urls[platform];
 }
 
-export { getUrlChannel };
+export const karmalandLogo = "karmaland-5.webp"
+export const tortillalandLogo = "tortillaland.png";
