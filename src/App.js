@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Channels />} />
+        <Route path="/"  />
         <Route
           path="karmaland"
           element={

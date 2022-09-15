@@ -1,4 +1,4 @@
-import { getUrlChannel } from "../utils";
+import { getUrlChannel, truncate } from "../utils";
 
 const Channel = ({ channel }) => {
 
@@ -21,7 +21,7 @@ const Channel = ({ channel }) => {
                             {/* Name */}
                             <div className="streamer-name-wrapper">
                                 <span className="streamer-name">{user_name}</span>
-                                <span className="streamer-title ">{title}</span>
+                                <span className="streamer-title ">{truncate(title)}</span>
                             </div>
 
                             {/* Online Status */}

@@ -6,6 +6,10 @@ export const getUrlChannel = (userName, platform) => {
 
     return urls[platform];
 }
+export const truncate = (source) => {
+    const size = 20;
+    return source.length > size ? source.slice(0, size - 1) + "…" : source;
+}
 
 export const karmalandLogo = "karmaland-5.webp"
 export const tortillalandLogo = "tortillaland.png";

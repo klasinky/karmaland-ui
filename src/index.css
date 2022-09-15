@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 body {
     color: rgba(239, 235, 224, 0.7);
     background-color: #121414;
     background-repeat: no-repeat, repeat;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     background-position: center top;
     font-size: 16px;
     padding: 0;
@@ -147,11 +147,7 @@ span {
     flex: 1;
 }
 
-.drop-tile
-    .drop-header
-    .streamer-details
-    .streamer-item
-    .streamer-title {
+.drop-tile .drop-header .streamer-details .streamer-item .streamer-title {
     color: #f7f7f7;
     box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
     align-self: flex-start;
@@ -183,6 +179,7 @@ span {
     border: 1px solid #de2a2a;
     position: relative;
     padding-left: 20px;
+    
 }
 
 .drop-tile .drop-header .streamer-details .streamer-item .online-status {
@@ -195,6 +192,8 @@ span {
     padding: 4px 6px;
     text-transform: uppercase;
     align-self: center;
+    display: none;
+
 }
 
 .drop-tile
@@ -233,7 +232,6 @@ a {
     }
 }
 
-
 /* FAQs */
 
 .section.is-large {
@@ -250,14 +248,17 @@ a {
     margin-bottom: 2rem;
 }
 
- a {
+a {
     color: #aa4734;
     transition: all 0.2s ease;
 }
 
+
+/* ---------------------------- // Large screens ---------------------------- */
+
 @media screen and (min-width: 769px) {
     .drop-tile {
-        flex: 0 0 calc(33.33% - 32px);
+        flex: 0 0 calc(50% - 32px);
     }
 
     .section .section-header {
@@ -271,6 +272,16 @@ a {
     .section .section-body {
         padding: 3rem;
     }
+    .drop-tile .drop-header .streamer-details .streamer-item .online-status{
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .drop-tile {
+        flex: 0 0 calc(33.33% - 32px);
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -278,6 +289,8 @@ a {
         padding: 6rem 0;
     }
 }
+
+
 
 .footer {
     background-color: rgba(0, 0, 0, 0.2);
@@ -288,6 +301,36 @@ a {
     padding: 4rem 0;
 }
 
-.footer-copyright{
-  color: rgba(239,235,224,.3);
+.footer-copyright {
+    color: rgba(239, 235, 224, 0.3);
+}
+
+/* Skeleton*/
+
+.skeleton {
+    transition: all 0.2s ease;
+    opacity: 0.8;
+}
+
+.skeleton .drop-header {
+    animation: skeleton 1s infinite;
+
+    transition: all 0.2s ease;
+}
+
+@keyframes skeleton {
+    /* from 0 to 100% in 10 steps */
+    0% {
+        background-color: #653729ba;
+    }
+    10% {
+        background-color: #65372967;
+    }
+    30% {
+        background-color: #65372969;
+    }
+
+    100% {
+        background-color: #65372907;
+    }
 }
