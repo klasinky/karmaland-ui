@@ -22,7 +22,7 @@ const Navbar = () => {
             <li className="nav-item">
               <NavLink
                 className='nav-link'
-                to="/"
+                to="/karmaland-ui"
                 end
               >
                 Inicio

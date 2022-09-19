@@ -334,3 +334,9 @@ a {
         background-color: #65372907;
     }
 }
+
+.img-serie{
+    width: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}

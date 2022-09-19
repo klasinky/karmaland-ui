@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" exact element={<Home/>}/>
+        <Route path="/karmaland-ui" exact element={<Home/>}/>
         <Route
           path="karmaland"
           element={
