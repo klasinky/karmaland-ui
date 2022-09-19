@@ -46,4 +46,5 @@ export const tortillaland = [
     { name: "jabu06", platform: "twitch" },
     { name: "deqiuv", platform: "twitch" },
     { name: "bertra", platform: "twitch" },
+    { name: "elisawaves", platform: "twitch" },
 ]
