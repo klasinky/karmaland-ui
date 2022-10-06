@@ -7,6 +7,8 @@ export const karmaland = [
     { name: "mangel", platform: "twitch" },
     { name: "quackity", platform: "twitch" },
     { name: "rubius", platform: "twitch" },
+    { name: "vegetta777", platform: "youtube", channel_id:"UCam8T03EOFBsNdR0thrFHdQ" },
+    { name: "Willyrex", platform: "twitch", channel_id:"UC8rNKrqBxJqL9izOOMxBJtw" },
 ]
 
 export const tortillaland = [
