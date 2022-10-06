@@ -49,6 +49,9 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
+      <nav>
+        <div id="google_element"></div>
+      </nav>
     </div>
   );
 };
