@@ -50,7 +50,7 @@ const Navbar = () => {
         </div>
       </nav>
       <nav>
-      <div id="google_element"></div>
+        <div id="google_element"></div>
       </nav>
     </div>
   );
