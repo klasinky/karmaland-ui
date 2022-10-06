@@ -22,7 +22,6 @@ export const tortillaland = [
     { name: "noni", platform: "twitch" },
     { name: "elmariana", platform: "twitch" },
     { name: "elspreen", platform: "twitch" },
-    { name: "ibai", platform: "twitch" },
     { name: "juansguarnizo", platform: "twitch" },
     { name: "karchez", platform: "twitch" },
     { name: "mayichi", platform: "twitch" },
